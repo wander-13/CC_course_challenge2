@@ -1,6 +1,6 @@
 ### Elena's Workflow  
 
-#### Goals and To Do:  
+#### Goals and To Do (based on the 'Specific tasks' subsection of the [Challenge level 2](https://ourcodingclub.github.io/DL/challenge2.html) website:  
 #### 1. Goal: Clean the data  
 Clean and filter the data to the sites and woodland types of interests:  
 - Restrict the NWSS observations to the following dominant habitat types:  
@@ -18,6 +18,6 @@ Clean and filter the data to the sites and woodland types of interests:
     - Abernethy (part of the "Cairngorms" group)  
 NB: There are 6 more NNRs in the Cairngorms National Park, but these three are large ones within the core of the park, and the only ones we'll be considering for this analysis.
 #### 1. To Do:   
-[ ] load the dataset and assign it to an object   
-[ ] use pipes and the dplyr package to change the dataset   
+- [ ] load the dataset and assign it to an object   
+- [ ] use pipes and the dplyr package to change the dataset   
 #### 2. 
