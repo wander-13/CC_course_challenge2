@@ -1,6 +1,6 @@
 ### Elena's Workflow  
 
-#### Goals and To Do (based on the 'Specific tasks' subsection of the [Challenge level 2](https://ourcodingclub.github.io/DL/challenge2.html) website:  
+#### Goals and To Do (based on the 'Specific tasks' section of the [Challenge level 2](https://ourcodingclub.github.io/DL/challenge2.html) website):  
 #### 1. Goal: Clean the data  
 Clean and filter the data to the sites and woodland types of interests:  
 - Restrict the NWSS observations to the following dominant habitat types:  
