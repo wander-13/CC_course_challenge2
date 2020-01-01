@@ -18,6 +18,6 @@ Clean and filter the data to the sites and woodland types of interests:
     - Abernethy (part of the "Cairngorms" group)  
 NB: There are 6 more NNRs in the Cairngorms National Park, but these three are large ones within the core of the park, and the only ones we'll be considering for this analysis.
 #### 1. To Do:   
-- [ ] load the dataset and assign it to an object   
+- [ ] load the datasets and assign them to objects   
 - [ ] use pipes and the dplyr package to edit that object based on the goals above   
 #### 2. 
