@@ -19,5 +19,5 @@ Clean and filter the data to the sites and woodland types of interests:
 NB: There are 6 more NNRs in the Cairngorms National Park, but these three are large ones within the core of the park, and the only ones we'll be considering for this analysis.
 #### 1. To Do:   
 - [ ] load the dataset and assign it to an object   
-- [ ] use pipes and the dplyr package to change the dataset   
+- [ ] use pipes and the dplyr package to edit that object based on the goals above   
 #### 2. 
