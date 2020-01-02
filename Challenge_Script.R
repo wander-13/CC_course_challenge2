@@ -5,6 +5,7 @@
 ### Load libraries ----
 library(tidyverse)
 library(sp)  # classes for spatial data
+library(sf)
 library(raster)  # grids, rasters
 library(rasterVis)  # raster visualisation
 library(maptools)
@@ -63,15 +64,14 @@ habitat_colors <- c('#d73027','#fc8d59','#fee090','#e0f3f8','#91bfdb','#4575b4')
 
 # Let's make another color palette with 35 colors (colors by ColorBrewer):
 habitat_colors2 <- c('#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c',
-                      '#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928',
+                     '#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928',
                      '#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462',
-                      '#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f',
+                     '#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f',
                      '#9e0142','#d53e4f','#f46d43','#fdae61','#fee08b','#ffffbf',
-                      '#e6f598','#abdda4','#66c2a5','#3288bd','#5e4fa2')
+                     '#e6f598','#abdda4','#66c2a5','#3288bd','#5e4fa2')
 
 # Now the following line of code works, associating the colors with individual habitat types
 names(habitat_colors2) <- levels(nwss$DOM_HABITA)
-
 
 # This did not work (I need package after package, which isn't efficient with my slow internet)
 # scotmap <- gmap("Scotland", type = "satellite", exp = 3)
@@ -85,12 +85,27 @@ map1 <- readOGR(
 )
 plot(nnr2$geometry)
 
+
+# I tried to run the following line of code, but the console says I need to fortify
+# the data first (make it more readable for ggplot)
+# (ggplot () + geom_sf(data = nwss2))
+fortify(nwss2)
+
+# I don't know whether the following code worked because it kept crashing R
+habmap <- ggplot () + geom_sf(data = nwss2)
+
 # 3. Calculate the percentage of land covered by each habitat in the 3 areas
 # and display it in a stacked bar graph
 
 # This wasn't in the 'Specific tasks' section but I think I need to merge nwss2 and structure
-habitats3 <- merge(nwss2, structure, by = "SCPTDATA_I", all = FALSE)
+habitats <- merge(nwss2, structure, by = "SCPTDATA_I", all = FALSE)
 # How do these data correspond to the data in the nnr2 dataframe?
+
+# Can I condense nwss2 so it's easier to work with? We are mostly interested in 
+# the habitats and geometry
+
+habitats2 <- habitats %>% 
+  select (SCPTDATA_I, OBJECTID, DOM_HABITA, HECTARES, SHAPE_LENG, Shape__Are, Shape__Len, ESTIMT_HA, geometry)
 
 
 
