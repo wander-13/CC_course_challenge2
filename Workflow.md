@@ -39,7 +39,7 @@ The total NNR area is found in the cell SITE_HA, and the habitat polygon size is
 
 #### 3. To Do:  
 - [ ] Figure out how to associate the total NNR area with the habitats (they are in two separate data frames)  
-- [ ] Merge the dataframes together (?)  
+- [ ] Merge the dataframes together (?) (HOW????)  
 - [ ] Calculate the proportion of each habitat in the reserves using code and mutate that column onto the dataframe  
 - [ ] Create a stacked bar chart to dispay the proportions of each habitat within the reserves  
 - [ ] Answer the question in words and record  
