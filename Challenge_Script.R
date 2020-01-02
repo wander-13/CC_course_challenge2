@@ -50,7 +50,7 @@ nnr2 <- nnr %>%
   mutate(NAME = recode_factor(NAME, "Mar Lodge Estate" = "Cairngorms")) %>% 
   mutate(NAME = recode_factor(NAME, "Abernethy" = "Cairngorms"))
 
-# 2. Create a map of each of the three areas
+# 2. Create a map of each of the three areas ----
 # How many priority habitat types are there?
 unique(nwss2$DOM_HABITA)
 # Only six priority habitats (so we will only need six colors in our color palette)
@@ -79,6 +79,7 @@ names(habitat_colors2) <- levels(nwss$DOM_HABITA)
 
 # Another crack at plotting the shape files, this time specifically using the rgdal package
 # Code from this website: https://www.r-graph-gallery.com/168-load-a-shape-file-into-r.html
+# Two notes: 1) I don't understand this code. 2) Regardless, it does not work.
 map1 <- readOGR( 
   dsn= paste0(nnr2) , 
   verbose=FALSE
@@ -97,21 +98,23 @@ habmap <- ggplot () + geom_sf(data = nwss2)
 
 # Perhaps the following code will work?
 (ggplot(nwss2) + aes(geometry))
-# Nope.
+# No, it doesnt. "Error: Discrete value supllied to continuous scale"
 
-# 3. Calculate the percentage of land covered by each habitat in the 3 areas
+# 3. Calculate the percentage of land covered by each habitat in the 3 areas ----
 # and display it in a stacked bar graph
 
 # This wasn't in the 'Specific tasks' section but I think I need to merge nwss2 and structure
 habitats <- merge(nwss2, structure, by = "SCPTDATA_I", all = FALSE)
-# How do these data correspond to the data in the nnr2 dataframe?
-
-# Can I condense nwss2 so it's easier to work with? We are mostly interested in 
+# Can I condense habitats so it's easier to work with? We are mostly interested in 
 # the habitats and geometry
-
+# Also I think I need to group by Dominant Habitat
 habitats2 <- habitats %>% 
-  select (SCPTDATA_I, OBJECTID, DOM_HABITA, HECTARES, SHAPE_LENG, Shape__Are, Shape__Len, ESTIMT_HA, geometry)
+  select (SCPTDATA_I, OBJECTID, DOM_HABITA, HECTARES, SHAPE_LENG, Shape__Are, 
+          Shape__Len, ESTIMT_HA, geometry) %>% 
+  group_by(DOM_HABITA) %>% 
+  summarise(total_ha = sum(ESTIMT_HA)) # add the area of the habitats together and put them in a column
 
+# ***** How do these data correspond to the data in the nnr2 dataframe? *****
 
 
 
