@@ -23,8 +23,8 @@ NB: There are 6 more NNRs in the Cairngorms National Park, but these three are l
 #### 2. Goal: Map the areas of interest  
 Create a map for each of the three areas (Cairngorms, Trossachs, and Glen Affric) showing the geographical distribution of the priority habitats.  
 - Create a colour palette that you will use consistently to refer to the habitat types  
-•	Be prepared to answer the question:  
-- What type(s) of priority habitat is (are) found in the Trossachs but not in the other two areas?  
+- Be prepared to answer the question:  
+    - What type(s) of priority habitat is (are) found in the Trossachs but not in the other two areas?  
 #### 2. To Do:  
 - [x] Count the number of habitat types  
 - [x] Create a color palette for the habitat types  
