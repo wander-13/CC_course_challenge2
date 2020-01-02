@@ -92,7 +92,12 @@ plot(nnr2$geometry)
 fortify(nwss2)
 
 # I don't know whether the following code worked because it kept crashing R
+# based off of https://datacarpentry.org/r-raster-vector-geospatial/06-vector-open-shapefile-in-r/
 habmap <- ggplot () + geom_sf(data = nwss2)
+
+# Perhaps the following code will work?
+(ggplot(nwss2) + aes(geometry))
+# Nope.
 
 # 3. Calculate the percentage of land covered by each habitat in the 3 areas
 # and display it in a stacked bar graph
