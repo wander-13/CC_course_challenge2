@@ -1,9 +1,9 @@
 # Native woodlands of Scotland
-### Challenge 2 of Coding Club's <a href="https://ourcodingclub.github.io/course_home/" target="_blank"> *Data Science for Ecologists and Environmental Scientists* </a> course
+### Challenge 2 of Coding Club's <a href="https://ourcodingclub.github.io/course/" target="_blank"> *Data Science for Ecologists and Environmental Scientists* </a> course
 
-This repository contains the datasets you will need to complete <a href="https://ourcodingclub.github.io/DL/challenge2.html" target="_blank">Challenge 2</a>. This challenge is associated with the <a href="https://ourcodingclub.github.io/course/wiz-viz.html" target="_blank">Wiz of Data Vis</a> module of the course. You can download this zipped folder to your computer (green button in top right corner), or fork this repository if you have a GitHub account. 
+This repository contains the datasets you will need to complete <a href="https://ourcodingclub.github.io/DL/challenge2.html" target="_blank">Challenge 2</a>. This challenge is associated with the <a href="https://ourcodingclub.github.io/course/wiz-viz/index.html" target="_blank">Wiz of Data Vis</a> module of the course. You can download this zipped folder to your computer (green button in top right corner), or fork this repository if you have a GitHub account. 
 
-The <a href="https://ourcodingclub.github.io/DL/challenge2.html" target="_blank">challenge page</a> contains all the information and instructions to get you started and guide you through the challenge.
+The <a href="https://ourcodingclub.github.io/course/wiz-viz-challenge/index.html" target="_blank">challenge page</a> contains all the information and instructions to get you started and guide you through the challenge.
 
 #### The datasets for the challenges are:
 
